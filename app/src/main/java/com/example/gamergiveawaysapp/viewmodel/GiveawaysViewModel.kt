@@ -24,7 +24,7 @@ class GiveawaysViewModel(
     }
 
     var platform: PlatformType = PlatformType.ANDROID
-    lateinit var selectedCurrentGiveAway : Giveaways
+    var selectedCurrentGiveAway : Giveaways? = null
 
     private val _sortedGiveaways: MutableLiveData<GiveawayState> = MutableLiveData(GiveawayState.LOADING)
     val giveaways: LiveData<GiveawayState> get() = _sortedGiveaways

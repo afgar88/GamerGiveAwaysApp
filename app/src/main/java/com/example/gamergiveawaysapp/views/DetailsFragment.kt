@@ -18,9 +18,7 @@ class DetailsFragment : BaseFragment() {
         FragmentDetailsBinding.inflate(layoutInflater)
     }
 
-
-    lateinit var giveaways: Giveaways
-
+    var giveaways: Giveaways? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -35,9 +33,10 @@ class DetailsFragment : BaseFragment() {
         // Inflate the layout for this fragment
 
         Picasso.get()
-            .load(giveaways.image)
+            .load(giveaways?.image)
             .fit()
             .into(binding.detailbackground)
+
         return binding.root
     }
 
